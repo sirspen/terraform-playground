@@ -10,6 +10,10 @@ resource "aws_instance" "example" {
   provisioner "local-exec" {
     command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
   }
+
+  tags = {
+    Name = var.ec2_name
+  }
 }
 
 resource "aws_eip" "ip" {

@@ -12,3 +12,8 @@ variable "amis" {
     "eu-west-1" = "ami-02df9ea15c1778c9c"
   }
 }
+
+variable "ec2_name" {
+  type    = string
+  default = "test"
+}
